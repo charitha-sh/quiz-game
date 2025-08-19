@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+  width: 400px;
+  text-align: center;
+}
+
+#question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.choice-btn {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.choice-btn:hover:not(:disabled) {
+  background: #ddd;
+}
+
+.correct {
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+.incorrect {
+  background-color: #f44336 !important;
+  color: white;
+}
+
+.choice-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#next-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+#timer {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff4444;
+}
+/* Fade in animation for questions and choices */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#question,
+#choices {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Button hover scale effect */
+.choice-btn:hover:not(:disabled) {
+  background: #ddd;
+  transform: scale(1.05);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Correct answer pulse */
+@keyframes pulseGreen {
+  0%, 100% { box-shadow: 0 0 8px #4caf50; }
+  50% { box-shadow: 0 0 16px #4caf50; }
+}
+
+.correct {
+  background-color: #4caf50 !important;
+  color: white;
+  animation: pulseGreen 1s ease infinite;
+}
+
+/* Incorrect answer shake */
+@keyframes shakeRed {
+  0%, 100% { transform: translateX(0); }
+  25%, 75% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+}
+
+.incorrect {
+  background-color: #f44336 !important;
+  color: white;
+  animation: shakeRed 0.4s ease;
+}
+#player-turn {
+  font-size: 18px;
+  color: #333;
+}
+#score1, #score2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+#winner-text {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2196F3;
+}
