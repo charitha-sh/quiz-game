@@ -1,3 +1,6 @@
+const correctSound = new Audio("sounds/correct.mp3");
+const incorrectSound = new Audio("sounds/incorrect.mp3");
+
 const questions = [
   {
     question: "What is the capital of France?",
@@ -18,7 +21,87 @@ const questions = [
     question: "What is 2 + 2?",
     choices: ["3", "4", "5", "22"],
     answer: "4"
-  }
+  },
+  {
+  question: "Which gas do plants absorb from the atmosphere?",
+  choices: ["Oxygen", "Hydrogen", "Carbon Dioxide", "Nitrogen"],
+  answer: "Carbon Dioxide"
+},
+{
+  question: "What is the largest ocean on Earth?",
+  choices: ["Atlantic", "Indian", "Pacific", "Arctic"],
+  answer: "Pacific"
+},
+{
+  question: "How many continents are there?",
+  choices: ["5", "6", "7", "8"],
+  answer: "7"
+},
+{
+  question: "Which is the fastest land animal?",
+  choices: ["Cheetah", "Leopard", "Lion", "Tiger"],
+  answer: "Cheetah"
+},
+{
+  question: "Who painted the Mona Lisa?",
+  choices: ["Van Gogh", "Picasso", "Leonardo da Vinci", "Michelangelo"],
+  answer: "Leonardo da Vinci"
+},
+{
+  question: "What is the boiling point of water in Celsius?",
+  choices: ["90°C", "95°C", "100°C", "110°C"],
+  answer: "100°C"
+},
+{
+  question: "What is the chemical symbol for water?",
+  choices: ["O2", "H2O", "CO2", "HO2"],
+  answer: "H2O"
+},
+{
+  question: "How many planets are in the Solar System?",
+  choices: ["7", "8", "9", "10"],
+  answer: "8"
+},
+{
+  question: "What part of the cell contains DNA?",
+  choices: ["Nucleus", "Membrane", "Cytoplasm", "Mitochondria"],
+  answer: "Nucleus"
+},
+{
+  question: "Which organ is responsible for pumping blood?",
+  choices: ["Lungs", "Liver", "Heart", "Kidneys"],
+  answer: "Heart"
+},
+{
+  question: "What gas do humans exhale?",
+  choices: ["Oxygen", "Carbon Dioxide", "Hydrogen", "Nitrogen"],
+  answer: "Carbon Dioxide"
+},
+{
+  question: "Who was the first President of the United States?",
+  choices: ["Abraham Lincoln", "George Washington", "John Adams", "Thomas Jefferson"],
+  answer: "George Washington"
+},
+{
+  question: "In which year did World War II end?",
+  choices: ["1940", "1943", "1945", "1950"],
+  answer: "1945"
+},
+{
+  question: "Who discovered America in 1492?",
+  choices: ["Vasco da Gama", "Christopher Columbus", "Marco Polo", "Ferdinand Magellan"],
+  answer: "Christopher Columbus"
+},
+{
+  question: "The Great Wall of China was primarily built to protect against which group?",
+  choices: ["Romans", "Huns", "Mongols", "Vikings"],
+  answer: "Mongols"
+},
+{
+  question: "What ancient civilization built the pyramids?",
+  choices: ["Romans", "Mesopotamians", "Egyptians", "Greeks"],
+  answer: "Egyptians"
+}
 ];
 
 let currentQuestionIndex = 0;
@@ -93,6 +176,16 @@ function selectAnswer(choice, selectedBtn) {
       btn.classList.add("incorrect");
     }
   });
+if (choice === correct) {
+  scores[currentPlayer]++;
+  correctSound.pause();
+  correctSound.currentTime = 0;
+  correctSound.play();
+} else {
+  incorrectSound.pause();
+  incorrectSound.currentTime = 0;
+  incorrectSound.play();
+}
 
   if (choice === correct) {
     scores[currentPlayer]++;

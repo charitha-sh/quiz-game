@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sound Test</title>
+</head>
+<body>
+  <button onclick="playCorrect()">Play Correct Sound</button>
+  <button onclick="playIncorrect()">Play Incorrect Sound</button>
+
+  <script>
+    const correctSound = new Audio("sounds/correct.mp3");
+    const incorrectSound = new Audio("sounds/incorrect.mp3");
+
+    function playCorrect() {
+      correctSound.play();
+    }
+
+    function playIncorrect() {
+      incorrectSound.play();
+    }
+  </script>
+</body>
+</html>
