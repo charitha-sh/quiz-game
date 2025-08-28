@@ -1,0 +1,56 @@
+# 🎮 Quiz Game Project
+
+This is a **multiplayer quiz game** built using **HTML**, **CSS**, and **JavaScript**. It allows two players to take turns answering multiple-choice questions with a timer, animated score display, and sound effects.
+
+---
+
+## 🧠 Features
+
+- ✅ 2-Player Turn-Based Mode
+- ⏳ 10-Second Timer for Each Question
+- 🎯 Score Tracking for Each Player
+- 🎉 Winner Announcement at End
+- 🎨 Smooth Animations (Fade, Pulse, Shake)
+- 🔊 Sound Effects for Correct and Incorrect Answers
+- 🧪 Fully Responsive and Interactive UI
+
+---
+
+## 📂 Project Structure
+
+quiz-game/
+├── index.html # Main HTML structure
+├── css.css # Styling and animations
+├── javascript.js # Game logic, multiplayer, timer, sounds
+├── sounds/ # Sound effects folder
+│ ├── correct.mp3
+│ └── incorrect.mp3
+├── README.md # Project overview and instructions
+
+---
+
+## 🚀 How to Run the Project
+
+1. Clone or download the repository.
+2. Open the `index.html` file in a browser, or use Live Server (recommended).
+3. Make sure the `sounds/` folder is in the same directory for audio to work properly.
+
+---
+
+## 🎥 Demo (optional)
+
+> _You can add a link here if you host the game on GitHub Pages or upload a demo video._
+
+---
+
+## 🙋‍♂️ Author
+
+- **Charitha SH**
+- GitHub: [charitha-sh](https://github.com/charitha-sh)
+
+---
+
+## 📌 Notes
+
+- Works best in modern browsers (Chrome, Edge, Firefox).
+- Make sure browser allows audio autoplay (some require user interaction first).
